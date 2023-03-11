@@ -1,16 +1,14 @@
 import fs from 'fs'
-import path from 'path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
 import styles from '/styles/Home.module.css'
-import Image from 'next/image'
 import Head from 'next/head';
 import hl from 'highlight.js';
 
 
 export default function Home({
   // Gets the variables from staticprops
-  frontmatter: { title, date, description, coverimage},
+  frontmatter: { title, description},
   html, 
 }: any) {
   return (
@@ -18,7 +16,7 @@ export default function Home({
       {/* Sets the metadata and title of page to post details */}
       <Head>
           <title>{title}</title>
-          <meta name="description" content="{description}" />
+          <meta name="description" content={description} />
           <link rel="icon" href="\favicon.ico" />
       </Head>
       
