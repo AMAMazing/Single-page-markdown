@@ -1,5 +1,5 @@
 # Single page markdown
-A guide on how to use Highlight JS and markdown.
+A guide on how to use Highlight JS with markdown.
 
 Blog post: https://amamazing-blog.vercel.app/blog/highlightjs
 
