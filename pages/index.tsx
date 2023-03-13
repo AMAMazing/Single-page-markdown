@@ -4,28 +4,7 @@ import { marked } from 'marked'
 import styles from '/styles/Home.module.css'
 import Head from 'next/head';
 import hl from 'highlight.js';
-
-
-export default function Home({
-  // Gets the variables from staticprops
-  frontmatter: { title, description},
-  html, 
-}: any) {
-  return (
-    <div className={styles.container}>
-      {/* Sets the metadata and title of page to post details */}
-      <Head>
-          <title>{title}</title>
-          <meta name="description" content={description} />
-          <link rel="icon" href="\favicon.ico" />
-      </Head>
-      
-      {/* Displays the content of post*/}
-      <div className="htmltext" dangerouslySetInnerHTML={{ __html: html }}></div>
-    </div>
-  )
-}
-
+import 'highlight.js/styles/vs2015.css'
 
 // Getstaticprops runs on the server making the website faster
 export async function getStaticProps() {
@@ -48,3 +27,23 @@ export async function getStaticProps() {
     }),
   }
 }}
+
+export default function Home({
+  // Gets the variables from staticprops
+  frontmatter: { title, description},
+  html, 
+}: any) {
+  return (
+    <div className={styles.container}>
+      {/* Sets the metadata and title of page to post details */}
+      <Head>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+          <link rel="icon" href="\favicon.ico" />
+      </Head>
+      
+      {/* Displays the content of post*/}
+      <div className="htmltext" dangerouslySetInnerHTML={{ __html: html }}></div>
+    </div>
+  )
+}

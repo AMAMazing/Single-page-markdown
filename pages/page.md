@@ -1,6 +1,5 @@
 ---
 title: 'Hello World'
-date: 'Mar 9, 2023'
 description: 'Hello world in 10 different programming languages'
 ---
 
